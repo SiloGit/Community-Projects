@@ -3,17 +3,31 @@
 # -*- coding: utf-8 -*-
 #
 #	SiloSec presents - 
-#	Our first community project
-#	Name pending. 
+#	Our first community project 
 
 """
+                                                                              
+d888888b d8b   db d88888b  .d88b.  .d8888. d88888b  .o88b. 
+  `88'   888o  88 88'     .8P  Y8. 88'  YP 88'     d8P  Y8 
+   88    88V8o 88 88ooo   88    88 `8bo.   88ooooo 8P      
+   88    88 V8o88 88~~~   88    88   `Y8b. 88~~~~~ 8b      
+  .88.   88  V888 88      `8b  d8' db   8D 88.     Y8b  d8 
+Y888888P VP   V8P YP       `Y88P'  `8888Y' Y88888P  `Y88P' 
+    ______ _           _                       _     
+   |  ____| |         | |                     | |    
+   | |__  | | __ _ ___| |__   ___ __ _ _ __ __| |___ 
+   |  __| | |/ _` / __| '_ \ / __/ _` | '__/ _` / __|
+   | |    | | (_| \__ \ | | | (_| (_| | | | (_| \__ \
+   |_|    |_|\__,_|___/_| |_|\___\__,_|_|  \__,_|___/
+                                                                                                            
+                                                           	
 	Objective:
 
-	Scrape info from a wiki, organize them, and
+	Scrape info from a wiki, organize data, and
 	then post them to Quizlet as flash cards.
 
-	Cards -
-	Wiki -
+	Cards - http://bit.ly/1zo7rTh
+	Wiki - http://www.silosec.org/w
 	Twitter - @Soul_Protocol
 
 	To Do -
