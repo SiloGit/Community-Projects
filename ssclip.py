@@ -16,6 +16,12 @@
 	Wiki -
 	Twitter - @Soul_Protocol
 
+	To Do -
+	
+	* Add HMAC for overkill safety and integrity check
+	* 
+
+
 """
 
 __authors__ = "Jay (SiloSec) (j@silosec.org), jsrn - #slothkrew"
@@ -30,6 +36,8 @@ from mechanize import Browser		# Fetches info for BSoup
 import re 							# Regular Expressions - Used here to organize strings
 import sys							# For Command-Line Arguments and Script Exit
 from bs4 import BeautifulSoup		# Does the heavy lifting in the scraping department
+import os
+import getpass
 
 
 ### Variables ----
@@ -44,16 +52,21 @@ GR = '\033[37m' # gray
 
 fcurl = "http://quizlet.com/44970397/linux-and-hacking-common-commands-and-memorize-mes-flash-cards/"  # Location of the Quizlet Flash Cards
 
-mech = Browser()					    # Using Mechanize to fetch html
+mech = Browser()					# Using Mechanize to fetch html
 page = mech.open(fcurl)				# Assigning the fetched page
-html = page.read()				  	# HTML Content ready for BS
-wurl = ""						        	# Wiki's URL
+html = page.read()					# HTML Content ready for BS
+wurl = ""							# Wiki's URL
+
+user = raw_input("Enter Account Username: ")
+pwd = getpass.getpass("Enter Account password: ")
 							
-version = "0.1a"				    	# Script Version Number
+version = "0.1a"					# Script Version Number
 
 
 
 ### Main ----
+
+print("\x1B]0;---InfoSec Flashcards--- \x07")	# Print to Terminal Title Bar
 
 # Help menu
 def usage():
@@ -65,13 +78,16 @@ def usage():
 
 usage()
 
+
 if __name__ == "__main__":
         try:
 			main()
 	except KeyboardInterrupt:
 		print B+"Search interrupted by user.."
+		#print("\x1B]0;\x07")					# Change Terminal Title Bar back to Normal
 		#exit_gracefully(0)
 	except:
+		#print("\x1B]0;\x07")					# Change Terminal Title Bar back to Normal
 		#exit_gracefully(0)
 		sys.exit
 
